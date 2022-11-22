@@ -21,7 +21,7 @@
                     <li><a href="#">Find Connections</a></li>
                 </ul>
             </div>
-            <button class="btn">Sign Out</button>
+            <button class="btn" onclick="signInOut(this)">Sign Out</button>
         </div>
     </div>
     <div class="container">
@@ -30,12 +30,12 @@
                 <div class="blueHeader">
                     <img src="images/jane-m.jpg" alt="Jane Profile Pic" id="jane">
                 </div>
-                <h1>Jane Doe</h1>
+                <h1 id="userName">Jane Doe</h1>
                 <h3><img src="icons/map-marker.png" alt="Map marker icon" class="icons"> Seattle</h3>
                 <p>Developer | Engineer | Problem Solver<br>
                 Master of shadows and the Internet!
                 </p>
-                <p><a href="#"><img src="icons/gear.png" alt="Gear icon" class="icons"> edit profile</a></p>
+                <p><a href="#" onclick="changeName()"><img src="icons/gear.png" alt="Gear icon" class="icons"> edit profile</a></p>
             </div>
             <div class="contentBox">
                 <div class="grayHeader">
@@ -50,35 +50,35 @@
             <div class="contentBox">
                 <div class="grayHeader">
                     <h2>
-                        <div class="circleNumbers">2</div>
+                        <span class="circleNumbers" id="connectionRequests">2</span>
                         Connection Requests
                     </h2>
                 </div>
-                <div class="connectionsBox">
+                <div class="connectionsBox" onclick="remove(this)">
                     <div class="imageAndText">
                         <img src="images/todd-s.jpg" alt="Todd profile pic" class="connectionsImg">
                         <h3> Todd E</h3>
                     </div>
                     <div class="iconsBox">
-                        <img src="icons/accept-circle.png" alt="Accept circle" class="connectionsIcons">
-                        <img src="icons/close-circle.png" alt="Deny circle" class="connectionsIcons">
+                        <img src="icons/accept-circle.png" alt="Accept circle" class="connectionsIcons" onclick="accept()">
+                        <img src="icons/close-circle.png" alt="Deny circle" class="connectionsIcons" onclick="deny()">
                     </div>
                 </div>
-                <div class="connectionsBox">
+                <div class="connectionsBox" onclick="remove(this)">
                     <div class="imageAndText">
                         <img src="images/phil-s.jpg" alt="Phil profile pic" class="connectionsImg">
                         <h3> Phil K</h3>
                     </div>
                     <div class="iconsBox">
-                        <img src="icons/accept-circle.png" alt="Accept circle" class="connectionsIcons">
-                        <img src="icons/close-circle.png" alt="Deny circle" class="connectionsIcons">
+                        <img src="icons/accept-circle.png" alt="Accept circle" class="connectionsIcons" onclick="accept()">
+                        <img src="icons/close-circle.png" alt="Deny circle" class="connectionsIcons" onclick="deny()">
                     </div>
                 </div>
             </div>
             <div class="contentBox">
                 <div class="grayHeader">
                     <h2>
-                        <div class="circleNumbers">500+</div>
+                        <span class="circleNumbers" id="currentConnections">418</span>
                         Your Connections
                     </h2>
                 </div>
@@ -103,5 +103,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
